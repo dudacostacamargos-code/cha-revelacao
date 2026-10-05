@@ -1,0 +1,43 @@
+PROGRAMA DE CONFIRMAÇÃO — CHÁ REVELAÇÃO (PWA)
+
+Esta versão foi preparada para funcionar como um aplicativo web instalável (PWA), com ícone na tela inicial do celular.
+
+Arquivos:
+- index.html = interface do painel e da confirmação.
+- Code.gs = API para Google Apps Script + Google Sheets.
+- manifest.webmanifest = configuração do aplicativo instalável.
+- sw.js = service worker/PWA.
+- icon-192.png e icon-512.png = ícones em verde oliva e rosa claro.
+
+CONFIGURAÇÃO:
+1. Crie uma planilha Google vazia.
+2. Abra Extensões > Apps Script.
+3. Cole o conteúdo de Code.gs.
+4. Substitua COLE_AQUI_O_ID_DA_PLANILHA pelo ID da planilha (parte entre /d/ e /edit na URL).
+5. Salve e execute a função setup uma vez.
+6. Publique: Implantar > Nova implantação > Aplicativo da Web.
+   - Executar como: você.
+   - Quem tem acesso: qualquer pessoa.
+7. Copie a URL da implantação.
+8. No index.html, substitua COLE_AQUI_A_URL_DO_APPS_SCRIPT pela URL copiada.
+9. Publique todos os arquivos desta pasta em uma hospedagem HTTPS (GitHub Pages, Netlify, Cloudflare Pages etc.).
+
+ATALHO NO CELULAR:
+- Abra o endereço publicado no Chrome do Android.
+- O sistema poderá mostrar “Adicionar à tela inicial”.
+- Também é possível usar o menu ⋮ do Chrome > “Adicionar à tela inicial” ou “Instalar aplicativo”.
+- Depois disso, o sistema aparece com o ícone “Chá Revelação” na tela inicial e abre em modo de aplicativo.
+
+CONTATOS:
+- O seletor de contatos depende do Contact Picker API do navegador e de HTTPS.
+- No Android/Chrome compatível, o botão “Selecionar contatos” permite escolher contatos do aparelho.
+- Se o navegador não oferecer essa função, ainda será possível cadastrar a família manualmente.
+
+REGRAS DO EVENTO:
+- Convite já enviado.
+- Prazo de confirmação: 07/10.
+- Confirmação por família inteira.
+- O convidado não informa quantidade de pessoas.
+- Não há acompanhantes, “talvez” ou alteração de resposta.
+- Cada família tem link exclusivo.
+- O painel mostra confirmadas, não irão e sem resposta.
